@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Heshan Randika</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="images/profile.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="logo">Heshan</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects">
+    <section class="carousel" aria-labelledby="carousel-heading">
+      <h2 id="carousel-heading">Project Highlights</h2>
+      <div class="carousel-container">
+        <button id="prevBtn" aria-label="Previous project slide">❮</button>
+        <div class="carousel-inner">
+          <img src="images/project1.png" alt="Project 1" loading="lazy">
+          <img src="images/project2.png" alt="Project 2" loading="lazy">
+          <img src="images/project3.png" alt="Project 3" loading="lazy">
+          <img src="images/project4.png" alt="Project 4" loading="lazy">
+        </div>
+        <button id="nextBtn" aria-label="Next project slide">❯</button>
+      </div>
+    </section>
+
+    <section class="projects-section" aria-labelledby="projects-heading">
+      <h1 id="projects-heading">My Projects</h1>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="images/project1.png" alt="Detailed photo of Portfolio Website">
+          <figcaption>
+            <strong>Portfolio Website</strong><br>
+            Developed a personal portfolio showcasing projects, technical skills, and experience. Built with a responsive and modern design, ensuring optimal performance and accessibility.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/project2.png" alt="Featured photo of Hotel Management System">
+          <figcaption>
+            <strong>Hotel Management System</strong><br>
+            Designed and optimized a hotel booking system to improve performance, user experience, and scalability. Implemented key features such as room reservations, user authentication, and a dynamic pricing model.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/project3.png" alt="Screenshot of Movie Explorer App">
+          <figcaption>
+            <strong>Movie Explorer App</strong><br>
+            Explore trending movies, search by title, view detailed info (trailer, cast, genres), and manage your personal favorites — all in a clean, responsive React app. Built with Context API, Material-UI, Framer Motion, and TMDb API. Includes login/logout flow, dark/light theme toggle, and user-specific session handling.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/project4.png" alt="Featured photo of Online Bookshop API">
+          <figcaption>
+            <strong>Online Bookshop API</strong><br>
+            Backend API for an online bookshop system featuring JWT authentication, password encryption, email verification, Google Books API integration, profile and cart management, checkout with invoice generation, and RESTful endpoints built with Node.js, Express, and MongoDB.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Randika</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

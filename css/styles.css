@@ -1,0 +1,424 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2a38;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00d1b2;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00d1b2;
+}
+
+.nav-links .active {
+  color: #00d1b2;
+}
+
+/* Main Sections */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.intro {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #2c2c2c;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #00d1b2;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00b89c;
+}
+
+/* Projects Page */
+.carousel {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  width: 300px;
+  height: 200px;
+  position: relative;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carousel button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #00d1b2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.projects-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-gallery figure {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery figure:hover {
+  transform: scale(1.03);
+}
+
+.project-gallery img {
+  width: 100%;
+  display: block;
+}
+
+.project-gallery figcaption {
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+/* About Page */
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.about-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+
+.contact-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0px 15px rgba(0,0,0,0.5);
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00d1b2;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+
+#formStatus {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #1e2a38;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section h1 {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+/* Dark Mode */
+.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark .intro p {
+  color: #b6b6b6;
+}
+
+.dark .about-section p {
+  margin-bottom: 1rem;
+  color: #b6b6b6;
+}
+
+.dark .navbar,
+.dark .footer {
+  background-color: #1f1f1f;
+}
+
+.dark .nav-links a {
+  color: #ccc;
+}
+
+.dark .nav-links a:hover {
+  color: #00d1b2;
+}
+
+.dark .project-gallery figure {
+  background-color: black;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+.dark .project-gallery figcaption {
+  color: #eee;
+}
+
+.dark .contact-section {
+  background-color: #121212;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+.dark .contact-section h2 {
+  color: white;
+}
+
+.dark input {
+    background-color: #121212;
+  color: white;
+}
+
+.dark textarea {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #00d1b2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.dark-toggle:hover {
+  background: #00b89c;
+}
+
+
+
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast a,
+.high-contrast .nav-links a {
+  color: yellow !important;
+  text-decoration: underline;
+}
+
+.high-contrast .btn,
+.high-contrast .dark-toggle,
+.high-contrast .contrast-toggle {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff;
+}
+
+.contrast-toggle {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.contrast-toggle:hover {
+  background: #555;
+}
