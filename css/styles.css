@@ -126,7 +126,7 @@ main {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #00d1b2;
+  background-color: #007866;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -134,7 +134,7 @@ main {
 }
 
 .btn:hover {
-  background-color: #00b89c;
+  background-color: #006556;
 }
 
 /* Projects Page */
@@ -169,7 +169,7 @@ main {
 .carousel button {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  background-color: #00d1b2;
+  background-color: #007866;
   color: white;
   border: none;
   cursor: pointer;
@@ -216,7 +216,7 @@ main {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .about-section h1 {
@@ -397,7 +397,7 @@ textarea:focus {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background: #00d1b2;
+  background: #007866;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -408,7 +408,7 @@ textarea:focus {
 }
 
 .dark-toggle:hover {
-  background: #00b89c;
+  background: #006556;
 }
 
 
