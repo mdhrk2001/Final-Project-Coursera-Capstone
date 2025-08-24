@@ -4,9 +4,42 @@ toggleButton.textContent = '🌓 Toggle Dark Mode';
 toggleButton.className = 'dark-toggle';
 document.body.appendChild(toggleButton);
 
+// ========= 2. HIGH CONTRAST MODE =========
+const contrastToggle = document.createElement('button');
+contrastToggle.textContent = '🔳 High Contrast';
+contrastToggle.className = 'contrast-toggle';
+document.body.appendChild(contrastToggle);
+
+// Function to update button labels based on screen width
+function updateButtonLabels() {
+  if (window.innerWidth < 500) {
+    toggleButton.textContent = '🌓';
+    toggleButton.title = 'Toggle Dark Mode';
+
+    contrastToggle.textContent = '🔳';
+    contrastToggle.title = 'High Contrast Mode';
+  } else {
+    toggleButton.textContent = '🌓 Toggle Dark Mode';
+    toggleButton.removeAttribute('title');
+
+    contrastToggle.textContent = '🔳 High Contrast';
+    contrastToggle.removeAttribute('title');
+  }
+}
+
+// Run on load
+window.addEventListener('DOMContentLoaded', updateButtonLabels);
+
+// Run on resize
+window.addEventListener('resize', updateButtonLabels);
+
+// Toggle dark mode
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  localStorage.setItem(
+    'theme',
+    document.body.classList.contains('dark') ? 'dark' : 'light'
+  );
 });
 
 // Load saved theme
@@ -16,7 +49,25 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ========= 2. BASIC CAROUSEL (for projects.html) =========
+// Toggle high contrast
+contrastToggle.addEventListener('click', () => {
+  document.body.classList.toggle('high-contrast');
+  localStorage.setItem(
+    'contrast',
+    document.body.classList.contains('high-contrast') ? 'high' : 'normal'
+  );
+});
+
+// Load saved contrast
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('contrast') === 'high') {
+    document.body.classList.add('high-contrast');
+  }
+});
+
+
+
+// ========= 3. BASIC CAROUSEL (for projects.html) =========
 const carouselImages = document.querySelectorAll('.carousel img');
 let currentSlide = 0;
 
@@ -42,24 +93,6 @@ if (carouselImages.length > 0) {
   document.getElementById('prevBtn').addEventListener('click', prevSlide);
   showSlide(currentSlide); // Show first image
 }
-
-// ========= 3. HIGH CONTRAST MODE =========
-const contrastToggle = document.createElement('button');
-contrastToggle.textContent = '🔳 High Contrast';
-contrastToggle.className = 'contrast-toggle';
-document.body.appendChild(contrastToggle);
-
-contrastToggle.addEventListener('click', () => {
-  document.body.classList.toggle('high-contrast');
-  localStorage.setItem('contrast', document.body.classList.contains('high-contrast') ? 'high' : 'normal');
-});
-
-// Load saved contrast preference
-window.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('contrast') === 'high') {
-    document.body.classList.add('high-contrast');
-  }
-});
 
 
 // ========= 4. CONTACT FORM VALIDATION =========
@@ -110,5 +143,15 @@ document.addEventListener('DOMContentLoaded', () => {
       status.style.color = 'red';
       status.textContent = 'Please correct the errors above.';
     }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
 });

@@ -22,19 +22,25 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
+  width: 100%;
+  min-width: 225px;
   justify-content: space-between;
   align-items: center;
   background-color: #1e2a38;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
+  white-space: nowrap;
   text-decoration: none;
 }
 
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -72,20 +78,38 @@ body {
   color: #00d1b2;
 }
 
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+
 /* Main Sections */
 main {
+  min-height: 75vh;
   flex: 1;
   padding: 2rem;
 }
 
 .profile-pic {
-  width: 200px;
+  width: 80%;
+  max-width: 200px;
   border-radius: 100%;
 }
 
 .intro {
   text-align: center;
-  padding-top: 4rem;
 }
 
 .intro h1 {
@@ -97,7 +121,6 @@ main {
 .intro p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #2c2c2c;
 }
 
 .btn {
@@ -131,14 +154,12 @@ main {
 }
 
 .carousel-inner {
-  width: 300px;
-  height: 200px;
+  max-width: 500px;
   position: relative;
 }
 
 .carousel-inner img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   display: none;
   border-radius: 8px;
@@ -205,7 +226,6 @@ main {
 
 .about-section p {
   margin-bottom: 1rem;
-  color: #2c2c2c;
 }
 
 
@@ -221,6 +241,7 @@ main {
 .contact-section h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: #222;
 }
 
 .form-group {
@@ -231,6 +252,7 @@ main {
   display: block;
   font-weight: 600;
   margin-bottom: 0.3rem;
+  color: #222;
 }
 
 input,
@@ -262,6 +284,8 @@ textarea:focus {
 
 /* Footer */
 .footer {
+  width: 100%;
+  min-width: 225px;
   background-color: #1e2a38;
   color: #fff;
   text-align: center;
@@ -355,6 +379,10 @@ textarea:focus {
   color: white;
 }
 
+.dark .form-group label {
+  color: white;
+}
+
 .dark input {
     background-color: #121212;
   color: white;
@@ -421,4 +449,67 @@ textarea:focus {
 
 .contrast-toggle:hover {
   background: #555;
+}
+
+
+/* Mobile view */
+@media (max-width: 500px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1e2a38;
+    opacity: 0.95;
+    flex-direction: row;
+    width: 100%;
+    text-align: right;
+    padding: 0.4rem;
+    justify-content: space-evenly;
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.active {
+    display: flex; /* show when active */  
+  }
+
+  .hamburger {
+    display: flex;
+    gap: 4px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  main {
+    padding: 0rem 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .intro {
+    padding-top: 3rem;
+  }
+
+  .carousel {
+    margin-top: 2.3rem;
+  }
+
+  .about-section {
+    padding-top: 2.3rem;
+  }
+
+  .carousel-container {
+    gap: 0.3rem;
+  }
+
+  .carousel button {
+    padding: 0.1rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2px;
+  }
 }
