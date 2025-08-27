@@ -1,3 +1,5 @@
+// js/script.js
+
 // ========= 1. DARK MODE TOGGLE =========
 const toggleButton = document.createElement('button');
 toggleButton.textContent = '🌓 Toggle Dark Mode';
@@ -155,3 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 });
+
+// Auto-update footer year
+document.getElementById("year").textContent = new Date().getFullYear();

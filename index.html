@@ -1,44 +1,77 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Heshan Randika | Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/x-icon" href="images/profile.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/profile.png" />
 </head>
 <body>
   <header>
     <nav class="navbar" aria-label="Main Navigation">
-      <a href="index.html" class="logo">MyPortfolio</a>
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Go to homepage">MyPortfolio</a>
 
+      <!-- Navigation Links -->
       <ul id="nav-links" class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
 
-      <div id="hamburger" class="hamburger">
+      <!-- Hamburger Menu (mobile) -->
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
   <main class="home">
     <section class="intro" aria-labelledby="intro-heading">
-      <img src="images/profile.png" alt="My Profile Photo" class="profile-pic">  
+      <!-- Cover Section -->
+      <section class="cover-section">
+        <div class="cover-image-container">
+          <img src="images/cover1.jpg" alt="Cover background with featured photo" class="cover-image">
+        </div>
+
+        <div class="cover-gifs">
+          <img src="https://user-images.githubusercontent.com/65187002/144930161-2f783401-8d27-4fdf-a2f7-cc0ba32f1f1f.gif" alt="Left GIF" class="gif left-gif">
+          <img src="https://user-images.githubusercontent.com/65187002/144930161-2f783401-8d27-4fdf-a2f7-cc0ba32f1f1f.gif" alt="Right GIF" class="gif right-gif">
+        </div>
+        <img src="images/profile.png" alt="Profile picture of Heshan Randika" class="profile-pic" />
+      </section>
+
       <h1 id="intro-heading">Hello, I'm Heshan Randika</h1>
-      <p>A passionate Software Engineering student building modern web applications.</p>
-      <a href="projects.html" class="btn">View My Work</a>
+      <p>A passionate <strong>Software Engineering student</strong> building modern web applications.</p>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://github.com/mdhrk2001" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+          <img src="images/github-icon.jpg" alt="GitHub Icon" width="32" height="32">
+        </a>
+        <a href="https://linkedin.com/in/mdhrk2001" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+          <img src="images/linkedin-icon.png" alt="LinkedIn Icon" width="32" height="32">
+        </a>
+      </div>
+
+      <div class="action-buttons">
+        <a href="/My Resume/Randika-FullStack-CV.pdf" download class="resume-btn">Download Resume</a>
+        <a href="projects.html" class="btn" aria-label="View my projects">View My Work</a>
+      </div>
+      
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Heshan Randika</p>
+    <p>&copy; <span id="year"></span> Heshan Randika</p>
   </footer>
 
   <script src="js/script.js"></script>
+
 </body>
 </html>
