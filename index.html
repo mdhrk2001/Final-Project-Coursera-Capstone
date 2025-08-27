@@ -1,28 +1,22 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heshan Randika | Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" type="image/png" href="images/profile.png" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/profile.png">
 </head>
 <body>
+  <!-- Navbar -->
   <header>
     <nav class="navbar" aria-label="Main Navigation">
-      <!-- Logo -->
       <a href="index.html" class="logo" aria-label="Go to homepage">MyPortfolio</a>
-
-      <!-- Navigation Links -->
       <ul id="nav-links" class="nav-links">
         <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
-
-      <!-- Hamburger Menu (mobile) -->
       <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
@@ -34,7 +28,7 @@
   <main class="home">
     <section class="intro" aria-labelledby="intro-heading">
       <!-- Cover Section -->
-      <section class="cover-section">
+      <div class="cover-section" role="img" aria-label="Cover Section with profile picture and GIFs">
         <div class="cover-image-container">
           <img src="images/cover1.jpg" alt="Cover background with featured photo" class="cover-image">
         </div>
@@ -43,9 +37,11 @@
           <img src="https://user-images.githubusercontent.com/65187002/144930161-2f783401-8d27-4fdf-a2f7-cc0ba32f1f1f.gif" alt="Left GIF" class="gif left-gif">
           <img src="https://user-images.githubusercontent.com/65187002/144930161-2f783401-8d27-4fdf-a2f7-cc0ba32f1f1f.gif" alt="Right GIF" class="gif right-gif">
         </div>
-        <img src="images/profile.png" alt="Profile picture of Heshan Randika" class="profile-pic" />
-      </section>
 
+        <img src="images/profile.png" alt="Profile picture of Heshan Randika" class="profile-pic">
+      </div>
+
+      <!-- Intro Text -->
       <h1 id="intro-heading">Hello, I'm Heshan Randika</h1>
       <p>A passionate <strong>Software Engineering student</strong> building modern web applications.</p>
 
@@ -59,19 +55,20 @@
         </a>
       </div>
 
+      <!-- Action Buttons -->
       <div class="action-buttons">
-        <a href="/My Resume/Randika-FullStack-CV.pdf" download class="resume-btn">Download Resume</a>
+        <a href="/My%20Resume/Randika-FullStack-CV.pdf" download class="resume-btn">Download Resume</a>
         <a href="projects.html" class="btn" aria-label="View my projects">View My Work</a>
       </div>
-      
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; <span id="year"></span> Heshan Randika</p>
   </footer>
 
   <script src="js/script.js"></script>
-
+  
 </body>
 </html>

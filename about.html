@@ -1,35 +1,22 @@
-<!-- about.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Heshan Randika</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" type="image/png" href="images/profile.png" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/profile.png">
 </head>
 <body>
   <header>
     <nav class="navbar" aria-label="Main Navigation">
-      <!-- Logo -->
       <a href="index.html" class="logo" aria-label="Go to homepage">MyPortfolio</a>
-
-      <!-- Navigation Links -->
       <ul id="nav-links" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html" class="active" aria-current="page">About</a></li>
       </ul>
-
-      <!-- Hamburger Menu -->
-      <button 
-        id="hamburger" 
-        class="hamburger" 
-        aria-label="Toggle menu" 
-        aria-expanded="false" 
-        aria-controls="nav-links"
-      >
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
@@ -48,9 +35,7 @@
         I enjoy creating user-focused, accessible, and performant web applications.
       </p>
       <p>Email: 
-        <a href="mailto:randikaheshan183@gmail.com">
-          randikaheshan183@gmail.com
-        </a>
+        <a href="mailto:randikaheshan183@gmail.com">randikaheshan183@gmail.com</a>
       </p>
     </section>
 
@@ -60,13 +45,13 @@
       <form id="contactForm" novalidate>
         <div class="form-group">
           <label for="name">Name <span aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="name" required aria-required="true" />
+          <input type="text" id="name" name="name" required aria-required="true">
           <small class="error-message" id="nameError"></small>
         </div>
 
         <div class="form-group">
           <label for="email">Email <span aria-hidden="true">*</span></label>
-          <input type="email" id="email" name="email" required aria-required="true" />
+          <input type="email" id="email" name="email" required aria-required="true">
           <small class="error-message" id="emailError"></small>
         </div>
 
